@@ -35,20 +35,20 @@ async function scrapePage (name, url) {
 
 async function scrape () {
   const pages = await getPages();
-  const promises = [];
   for (const page of pages) {
-    // https://ngodarpan.gov.in/index.php/home/statewise_ngo/81/35/1
+    const promises = [];
     const [rows, id] = page.url.split('/').splice(-3).slice(0, 2);
     for (let pageN = 1; (pageN - 1) * 100 < rows; pageN += 1) {
       const url = `${URL}_ngo/${rows}/${id}/${pageN}?per_page=100`;
       promises.push(scrapePage(page.name, url));
     }
+    await Promise.all(promises);
+    console.log(page.name);
   }
-  await Promise.all(promises);
 }
 
 scrape().then(() => {
-  fs.writeFile('output.json', JSON.stringify(data), 'utf8', (err) => {
+  fs.writeFile('data.json', JSON.stringify(data), 'utf8', (err) => {
     if (err) {
       console.log('An error occured while writing JSON Object to File.');
       return console.log(err);
