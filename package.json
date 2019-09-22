@@ -1,0 +1,19 @@
+{
+  "name": "ngodarpan-scraper",
+  "version": "1.0.0",
+  "description": "A simple scraper for extract data from https://ngodarpan.gov.in",
+  "main": "scrape.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S1M0N38/ngodarpan-scraper.git"
+  },
+  "author": "S1M0N38",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/S1M0N38/ngodarpan-scraper/issues"
+  },
+  "homepage": "https://github.com/S1M0N38/ngodarpan-scraper#readme"
+}
