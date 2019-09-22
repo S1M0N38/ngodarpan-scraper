@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/S1M0N38/ngodarpan-scraper/issues"
   },
-  "homepage": "https://github.com/S1M0N38/ngodarpan-scraper#readme"
+  "homepage": "https://github.com/S1M0N38/ngodarpan-scraper#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "node-fetch": "^2.6.0"
+  }
 }
